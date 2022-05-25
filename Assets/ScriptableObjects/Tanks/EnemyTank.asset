@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8284845149aeb5f48a23e1bb0e6b3f86, type: 3}
+  m_Name: EnemyTank
+  m_EditorClassIdentifier: 
+  tankType: 4
+  bulletType: 2
+  TankName: Enemy Tank
+  speed: 50
+  health: 50
+  rotationSpeed: 60
+  TurretRotationSpeed: 60
+  chaseRange: 15
+  attackRange: 10
+  InChaseRange: 0
+  InAttackRange: 0
+  WalkPoint: {x: 0, y: 0, z: 0}
+  WalkPointSet: 0
+  WalkPointRange: 20
+  TimeBetweenAttacks: 1
+  justAttacked: 0

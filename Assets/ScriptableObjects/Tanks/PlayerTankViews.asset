@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed0c1036a5f9174f9aba4cb07ea24b1, type: 3}
+  m_Name: PlayerTankViews
+  m_EditorClassIdentifier: 
+  TankViewList:
+  - {fileID: 7874103658175444177, guid: 5a029a4c868ee5547b9dae3090ac5943, type: 3}
+  - {fileID: 4253712570148713000, guid: 6be1b772ffee6c54c98708648fce439d, type: 3}
+  - {fileID: 7741296387001864481, guid: 20944d994c9bf4248afa3548f9d06124, type: 3}
