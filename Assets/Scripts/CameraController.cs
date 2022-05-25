@@ -6,7 +6,9 @@ public class CameraController : MonoBehaviour
 {
     public Transform playerTank;
     public Vector3 offset;
-      
+    public Camera camera;
+    private float CameraZoomOutSpeed = 0.0001f;
+
 
     private void Start()
     {
@@ -36,6 +38,20 @@ public class CameraController : MonoBehaviour
         
     }
 
+    public async void ZoomOutCamera()  //not working
 
-   
+    {
+        Debug.Log("Kar Le kam");
+        float lerp = 0.01f;
+        //camera.transform.SetParent(null);
+        while (camera.orthographicSize < 30)
+        {
+            camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, 30, lerp);
+            lerp = lerp + CameraZoomOutSpeed;
+            await new WaitForSeconds(0.01f);
+        }
+    }
+
+
+
 }

@@ -32,7 +32,7 @@ Transform:
   m_LocalPosition: {x: -7.333, y: 1.095, z: -0.112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6587057199065469610}
+  - {fileID: 1031074645276787932}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b21abe073413d4e9cd44d695c09166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BExplode: {fileID: 6587057199046148854}
+  BExplode: {fileID: 1031074645292078208}
 --- !u!54 &-1263244852442443040
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2987081, y: 0.29870814, z: 0.5252612}
   m_Center: {x: 0, y: 0.000000007450581, z: 0.19800001}
---- !u!1001 &6587057199065694176
+--- !u!1001 &1031074645277010326
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -196,15 +196,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89e78efe92dfe5a42837b392cdb0bf9e, type: 3}
---- !u!4 &6587057199065469610 stripped
+--- !u!4 &1031074645276787932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 486730, guid: 89e78efe92dfe5a42837b392cdb0bf9e,
     type: 3}
-  m_PrefabInstance: {fileID: 6587057199065694176}
+  m_PrefabInstance: {fileID: 1031074645277010326}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &6587057199046148854 stripped
+--- !u!198 &1031074645292078208 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 19807510, guid: 89e78efe92dfe5a42837b392cdb0bf9e,
     type: 3}
-  m_PrefabInstance: {fileID: 6587057199065694176}
+  m_PrefabInstance: {fileID: 1031074645277010326}
   m_PrefabAsset: {fileID: 0}

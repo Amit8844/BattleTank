@@ -11,12 +11,12 @@ public class TankController
     // JoyStick & Camera References.
     private Joystick LeftJoyStick;
     private Joystick RightJoyStick;
-    public Camera camera;
+    //public CameraController cameraController;
 
     // Speed variables.
     private float SpeedMultipier = 0.001f;
     private float RotationSpeedMultiplier = 0.01f;
-    private float CameraZoomOutSpeed = 0.0001f;
+    //private float CameraZoomOutSpeed = 0.0001f;
 
     private float StartingHealth = 300f;
     //public float LerpSpeed = 3f*Time.deltaTime;
@@ -44,11 +44,11 @@ public class TankController
     }
     
     // Sets the reference to the Camera & makes it a child object of PLayer Tank.
-    public void SetCameraReference(Camera cameraRef)
-    {
-      camera = cameraRef;
-       camera.transform.SetParent(TankView.transform);
-     }
+    //public void SetCameraReference(Camera cameraRef)
+    //{
+    //  camera = cameraRef;
+    //   camera.transform.SetParent(TankView.transform);
+    // }
 
     // This Function Handles the Input from the Left Joystick.
     public void HandleLeftJoyStickInput(Rigidbody tankRigidBody)
@@ -77,26 +77,11 @@ public class TankController
     // Calls some asynchronous methods to destroy the world gradually with a cool effect.
     public void DestroyWorld()
     {
-        ZoomOutCamera();
+        TankService.Instance.playerCamera.ZoomOutCamera();
         DestroyTanks();
         DestoryEnv();
     }
-
-    // A function to Zoom Out Camera Asynchronously when the player dies.
-    private async void ZoomOutCamera()  //not working
-
-    {
-        Debug.Log("Kar Le kam");
-        float lerp = 0.01f;
-        camera.transform.SetParent(null);
-        while (camera.orthographicSize < 50)
-        {
-            camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, 50, lerp);
-            lerp = lerp + CameraZoomOutSpeed;
-            await new WaitForSeconds(0.01f);
-        }
-    }
-
+       
     // Destroys all Game Objects Tagged as 'Tank' one by one using async await.
     private async void DestroyTanks()
     {
@@ -119,7 +104,7 @@ public class TankController
         for (int i = 0; i < objects.Length; i++)
         {
             GameObject.Destroy(objects[i]);
-            await new WaitForSeconds(0.03f);
+            await new WaitForSeconds(0.05f);
         }
     }
 
