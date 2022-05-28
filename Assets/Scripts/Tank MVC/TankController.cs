@@ -19,6 +19,15 @@ public class TankController
     //private float CameraZoomOutSpeed = 0.0001f;
 
     private float StartingHealth = 300f;
+
+
+
+
+
+
+
+    //public static bool nextLevel;
+    //public GameObject nextLevelPanel;
     //public float LerpSpeed = 3f*Time.deltaTime;
 
 
@@ -37,12 +46,12 @@ public class TankController
         RightJoyStick = rightJoyStick;
     }
 
-   public Transform GetTransform()
+    public Transform GetTransform()
     {
         return TankView.transform;
-        
+
     }
-    
+
     // Sets the reference to the Camera & makes it a child object of PLayer Tank.
     //public void SetCameraReference(Camera cameraRef)
     //{
@@ -53,18 +62,19 @@ public class TankController
     // This Function Handles the Input from the Left Joystick.
     public void HandleLeftJoyStickInput(Rigidbody tankRigidBody)
     {
-        if(LeftJoyStick.Vertical != 0)
+        if (LeftJoyStick.Vertical != 0)
         {
             Vector3 ZAxisMovement = tankRigidBody.transform.position + (tankRigidBody.transform.forward * LeftJoyStick.Vertical * TankModel.Speed * SpeedMultipier);
             tankRigidBody.MovePosition(ZAxisMovement);
+            
         }
-        
-        if(LeftJoyStick.Horizontal != 0)
+
+        if (LeftJoyStick.Horizontal != 0)
         {
             Quaternion newRotation = tankRigidBody.transform.rotation * Quaternion.Euler(Vector3.up * LeftJoyStick.Horizontal * TankModel.RotationSpeed * RotationSpeedMultiplier);
             tankRigidBody.MoveRotation(newRotation);
         }
-        
+
     }
 
     // This Function Handles the Input recieved from the Right Joystick.
@@ -77,23 +87,36 @@ public class TankController
     // Calls some asynchronous methods to destroy the world gradually with a cool effect.
     public void DestroyWorld()
     {
-        TankService.Instance.playerCamera.ZoomOutCamera();
+       TankService.Instance.playerCamera.ZoomOutCamera();
         DestroyTanks();
         DestoryEnv();
-    }
+        
        
+        GameManager.Instance.G_ameOver();
+
+
+
+    }
+
+
     // Destroys all Game Objects Tagged as 'Tank' one by one using async await.
     private async void DestroyTanks()
     {
         GameObject[] tanks = GameObject.FindGameObjectsWithTag("Tank");
         for (int i = 0; i < tanks.Length; i++)
         {
+            TankView.TExplode.transform.parent = null;
+
+            TankView.TExplode.Play();
+
             GameObject.Destroy(tanks[i]);
-           
-          
+
+
 
             Debug.Log("DEad");
             await new WaitForSeconds(0.1f);
+           
+
         }
     }
 
@@ -114,9 +137,15 @@ public class TankController
         TankModel.Health -= damage;
         SetHealthUI();
 
-        if (TankModel.Health <= 0f )
+        if (TankModel.Health <= 0f)
         {
+
             DestroyWorld();
+            
+           
+
+
+
         }
 
         //    if (TankModel.Health - damage <= 0)
@@ -136,9 +165,9 @@ public class TankController
     public void SetHealthUI()
     {
 
-        float LerpSpeed = 3f*Time.deltaTime;
+        float LerpSpeed = 3f * Time.deltaTime;
         TankView.HealthBar.fillAmount = Mathf.Lerp(TankView.HealthBar.fillAmount, TankModel.Health / StartingHealth, LerpSpeed);
-        Color HealthColor = Color.Lerp(Color.red, Color.green, (TankModel.Health/StartingHealth ));
+        Color HealthColor = Color.Lerp(Color.red, Color.green, (TankModel.Health / StartingHealth));
         TankView.HealthBar.color = HealthColor;
 
     }
@@ -160,6 +189,10 @@ public class TankController
         Debug.Log(TankModel.BulletsFired);
         AchievementSystem.Instance.BulletsFiredCountCheck(TankModel.BulletsFired);
     }
-
-
 }
+
+    
+
+
+
+

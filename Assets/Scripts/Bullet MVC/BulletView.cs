@@ -7,9 +7,12 @@ using UnityEngine;
 /// </summary>
 public class BulletView : MonoBehaviour
 {
+    [SerializeField] private AudioSource _BXAudio;
+    [SerializeField] private AudioSource _BSAudio;
 
     public ParticleSystem BExplode;
     BulletController bulletController;
+    
 
   
 
@@ -23,9 +26,11 @@ public class BulletView : MonoBehaviour
         bulletController.InflictDamage(collision.gameObject);
         BExplode.transform.parent = null;
 
+        _BSAudio.Play();
         BExplode.Play();
+       
 
-
+        _BXAudio.Play();    
         Destroy(gameObject);
     }
 }

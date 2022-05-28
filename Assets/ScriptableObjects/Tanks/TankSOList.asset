@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TankSOList:
   - {fileID: 11400000, guid: e5e9cf81a61971e4693f76ae6ebcbcf3, type: 2}
-  - {fileID: 11400000, guid: dc9907d074c3cb34ba817f0983ec8aeb, type: 2}
   - {fileID: 11400000, guid: 600b012fce0597e43bcffd4f610ed1c5, type: 2}
   - {fileID: 11400000, guid: 6d1ce6fc8388c4e4fb1f03ae68205dee, type: 2}
+  - {fileID: 11400000, guid: dc9907d074c3cb34ba817f0983ec8aeb, type: 2}

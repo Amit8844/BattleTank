@@ -17,7 +17,7 @@ MonoBehaviour:
   TankName: Average Green Tank
   speed: 100
   health: 300
-  rotationSpeed: 90
-  TurretRotationSpeed: 90
+  rotationSpeed: 200
+  TurretRotationSpeed: 200
   bulletsFired: 0
   enemiesKilled: 0

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TankViewList:
   - {fileID: 7874103658175444177, guid: 5a029a4c868ee5547b9dae3090ac5943, type: 3}
-  - {fileID: 4253712570148713000, guid: 6be1b772ffee6c54c98708648fce439d, type: 3}
-  - {fileID: 7741296387001864481, guid: 20944d994c9bf4248afa3548f9d06124, type: 3}
+  - {fileID: 7874103658175444177, guid: 1df90498535b768458bbfb4aebadffcf, type: 3}
+  - {fileID: 7874103658175444177, guid: 0648d6272d58839429ddaba20e66fc19, type: 3}

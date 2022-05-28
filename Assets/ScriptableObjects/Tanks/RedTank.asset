@@ -16,8 +16,8 @@ MonoBehaviour:
   bulletType: 3
   TankName: Fast Red Tank
   speed: 200
-  health: 150
-  rotationSpeed: 120
-  TurretRotationSpeed: 120
+  health: 300
+  rotationSpeed: 200
+  TurretRotationSpeed: 200
   bulletsFired: 0
   enemiesKilled: 0

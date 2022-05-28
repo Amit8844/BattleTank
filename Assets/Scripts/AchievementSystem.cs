@@ -10,6 +10,7 @@ public class AchievementSystem : SingletonGeneric<AchievementSystem>
     [SerializeField] private CanvasRenderer AchievementPanel;
     [SerializeField] private Text AchievementName;
     [SerializeField] private Text AchievementInfo;
+
     private int currentBulletFiredAchivementLevel;
     private int currentEnemiesKilledAchievementLevel;
 
@@ -57,7 +58,7 @@ public class AchievementSystem : SingletonGeneric<AchievementSystem>
             if(achievementSOList.enemiesKilledAchievementSO.achievements[i].requirement == TankService.Instance.tankController.TankModel.EnemiesKilled)
             {
                 UnlockAchievement(achievementSOList.enemiesKilledAchievementSO.achievements[i].name, achievementSOList.enemiesKilledAchievementSO.achievements[i].info);
-                currentEnemiesKilledAchievementLevel = i + 1;
+                //currentEnemiesKilledAchievementLevel = i + 1;
             }
             break;
         }

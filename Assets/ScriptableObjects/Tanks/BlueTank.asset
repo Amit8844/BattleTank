@@ -16,8 +16,8 @@ MonoBehaviour:
   bulletType: 1
   TankName: Heavy Blue Tank
   speed: 70
-  health: 600
-  rotationSpeed: 100
-  TurretRotationSpeed: 100
+  health: 300
+  rotationSpeed: 200
+  TurretRotationSpeed: 200
   bulletsFired: 0
   enemiesKilled: 0
