@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cbd0e4fa5e62ed4db7d518f3f63b85e, type: 3}
+  m_Name: BulletsFiredAchievementSO
+  m_EditorClassIdentifier: 
+  achievements:
+  - name: Just Getting Started
+    info: Fired 10 Bullets
+    selectAchievement: 1
+    requirement: 10
+  - name: Destructor
+    info: Fired 25 Bullets
+    selectAchievement: 2
+    requirement: 25
+  - name: Rampage
+    info: Fired 50 Bullets
+    selectAchievement: 3
+    requirement: 50
