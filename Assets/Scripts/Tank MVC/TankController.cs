@@ -52,12 +52,7 @@ public class TankController
 
     }
 
-    // Sets the reference to the Camera & makes it a child object of PLayer Tank.
-    //public void SetCameraReference(Camera cameraRef)
-    //{
-    //  camera = cameraRef;
-    //   camera.transform.SetParent(TankView.transform);
-    // }
+    
 
     // This Function Handles the Input from the Left Joystick.
     public void HandleLeftJoyStickInput(Rigidbody tankRigidBody)
@@ -148,16 +143,7 @@ public class TankController
 
         }
 
-        //    if (TankModel.Health - damage <= 0)
-        //    {
-        //        // death.
-        //        DestroyWorld();
-        //    }
-        //    else
-        //    {
-        //        TankModel.Health -= damage;
-        //        SetHealthUI();  
-        //    }
+       
     }
 
 
