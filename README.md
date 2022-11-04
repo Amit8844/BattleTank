@@ -7,7 +7,9 @@ This is a tank battle game created with unity. This game implements code archite
 Features
 Movement with joystick.
 Dynamic shooting for player.
-AI enemy with idle, partol, chase and shoot states.
+AI enemy with idle,
+partol, 
+chase and shoot states.
 Accurate enemy aiming system.
 Achievement system
 Design patterns
