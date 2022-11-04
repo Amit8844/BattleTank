@@ -1,12 +1,12 @@
 # BattleTank
 This is a tank battle game created with unity. This game implements code architecture which is scalable and easliy modifyable.
-#Features
+# Features
 - Movement with joystick.
 - Dynamic shooting for player.
 - AI enemy with idle, partol, chase and shoot states.
 - Accurate enemy aiming system.
 - Achievement system
-#Design Pattern
+# Design Pattern
 - Singleton
 - Observer
 - Factory
