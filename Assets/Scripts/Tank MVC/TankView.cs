@@ -16,17 +16,10 @@ public class TankView : MonoBehaviour, IDamagable
     public ParticleSystem TExplode;
     public AudioSource TrackAudio;
 
-
-
-
     private void Start()
     {
         tankController.SubscribeEvents();
-       
-
-    }
-
-    
+     }
 
     private void FixedUpdate()
     {
@@ -34,8 +27,6 @@ public class TankView : MonoBehaviour, IDamagable
         TrackAudio.Play();  
         tankController.HandleRightJoyStickInput(Turret.transform);
     }
-
-    
 
     private void Update()
     {
@@ -57,7 +48,7 @@ public class TankView : MonoBehaviour, IDamagable
     // Implements the method of IDamagable interface to be able to take damage.
     public void TakeDamage(float damage)
     {
-       // Debug.Log("Player Tank Taking Damage: " + damage, gameObject);
+       
         tankController.ApplyDamage(damage);
         
     }

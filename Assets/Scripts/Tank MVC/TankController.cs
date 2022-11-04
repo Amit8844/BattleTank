@@ -11,25 +11,13 @@ public class TankController
     // JoyStick & Camera References.
     private Joystick LeftJoyStick;
     private Joystick RightJoyStick;
-    //public CameraController cameraController;
+   
 
     // Speed variables.
     private float SpeedMultipier = 0.001f;
     private float RotationSpeedMultiplier = 0.01f;
-    //private float CameraZoomOutSpeed = 0.0001f;
-
+   
     private float StartingHealth = 300f;
-
-
-
-
-
-
-
-    //public static bool nextLevel;
-    //public GameObject nextLevelPanel;
-    //public float LerpSpeed = 3f*Time.deltaTime;
-
 
     public TankModel TankModel { get; }
     public TankView TankView { get; }
@@ -51,8 +39,6 @@ public class TankController
         return TankView.transform;
 
     }
-
-    
 
     // This Function Handles the Input from the Left Joystick.
     public void HandleLeftJoyStickInput(Rigidbody tankRigidBody)
@@ -85,11 +71,8 @@ public class TankController
        TankService.Instance.playerCamera.ZoomOutCamera();
         DestroyTanks();
         DestoryEnv();
-        
-       
+      
         GameManager.Instance.G_ameOver();
-
-
 
     }
 
@@ -105,8 +88,6 @@ public class TankController
             TankView.TExplode.Play();
 
             GameObject.Destroy(tanks[i]);
-
-
 
             Debug.Log("DEad");
             await new WaitForSeconds(0.1f);
@@ -136,19 +117,11 @@ public class TankController
         {
 
             DestroyWorld();
-            
-           
-
-
-
+          
         }
-
-       
     }
 
-
-
-    public void SetHealthUI()
+     public void SetHealthUI()
     {
 
         float LerpSpeed = 3f * Time.deltaTime;

@@ -25,21 +25,11 @@ public class TankService : SingletonGeneric<TankService>
     public int tankType;
     
 
-    
-    
-    
-
-
-
-
     private void Start()
     {
         StartGame();
 
     }
-
-
-
 
 
     public void StartGame()
@@ -55,7 +45,6 @@ public class TankService : SingletonGeneric<TankService>
         tankController.SetJoyStickReferences(LeftJoyStick,RightJoyStick);
         playerCamera.playerTank = tankController.GetTransform();
 
-        // tankController.SetCameraReference(playerCamera);
         tankController.TankView.SetTankControllerReference(tankController);
         return tankController;
     }
